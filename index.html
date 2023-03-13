@@ -1,3 +1,5 @@
+<!-- https://ogp.me/#types -->
+<!DOCTYPE html>
 <html lang="ru"> <!-- The standard language -->
 <head>
     <meta charset="UTF-8">
@@ -8,21 +10,45 @@
     <meta name="keywords" content="Keywords">
     <meta name="robots" content="index, follow">
     <meta name="language" content="Russian"> <!-- The standard language that the bot sees -->
-    <meta name="revisit-after" content="5 days">
-    <meta name="author" content="author">
+    <meta name="revisit-after" content="5 days"> <!-- After how many days the bot will visit the site again -->
+    <!-- <meta name="author" content="author"> -->
     <meta name="format-detection" content="telephone=no"> <!-- Fixed size for phone -->
     <meta name="apple-mobile-web-app-capable" content="yes"> <!-- Setting up for apple phones -->
     <!-- Setting the site color to match the main color -->
-    <!-- <meta name="theme-color" content="black">
-    <meta name="color-scheme" content="dark"> -->
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico"> <!-- Website logo -->
+    <!-- <meta name="theme-color" content="black"> -->
+    <!-- <meta name="color-scheme" content="dark"> -->
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico"> <!-- Website logo. Here it is necessary to specify the full path to the file on the site. Example: www.ya.ru/img/favicon.ico -->
     <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="/img/favicon.ico"> <!-- Website logo for apple -->
+    <link rel="apple-touch-icon" href="/img/favicon.ico"> <!-- Website logo for apple. Here it is necessary to specify the full path to the file on the site. Example: www.ya.ru/img/favicon.ico -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Website_SEO</title>
+    <!-- Open Graph Generated -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Website_SEO">
+    <meta property="og:description" content="your content">
+    <meta property="og:url" content="url"> <!-- Here you need to specify a link to your site. Example: www.ya.ru/img/log.webp -->
+    <meta property="og:image" content="/img/log.webp"> <!-- Adding a picture for a description. Here it is necessary to specify the full path to the file on the site. Example: www.ya.ru/img/log.webp -->
+    <!-- <meta property="og:site_name" content="author"> -->
+    <meta property="og:locale" content="ru_RU"> <!-- The standard language -->
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:site" content="username">
+    <meta property="twitter:creator" content="username">
+    <meta property="twitter:image:src" content="/img/log.webp">
 </head>
 <body>
     <H1>Home</H1>
 </body>
+<script async>
+    if ('serviceWorker' in navigator) {
+ // Весь код регистрации у нас асинхронный.
+ navigator.serviceWorker.register('./sw.js')
+   .then(() => navigator.serviceWorker.ready.then((worker) => {
+     worker.sync.register('syncdata');
+   }))
+   .catch((err) => console.log(err));
+}
+   </script>
+   <!-- https://metrika.yandex.ru/ -->
+   <!-- https://analytics.google.com/ -->
 </html>
